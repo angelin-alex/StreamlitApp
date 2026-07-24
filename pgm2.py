@@ -37,6 +37,7 @@ st.divider()
 
 if st.button("✅ Register"):
 
+    st.balloons()
     st.success("Registration Completed Successfully!")
 
     st.markdown("## 📄 Registration Summary")
