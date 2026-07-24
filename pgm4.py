@@ -35,6 +35,8 @@ document = st.file_uploader("Upload Document")
 st.divider()
 if st.button("📩 Submit Feedback"):
 
+    st.balloons()
+
     st.success("Feedback Submitted Successfully!")
 
     st.metric("⭐ Satisfaction Rating", rating)
