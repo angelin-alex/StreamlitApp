@@ -46,7 +46,7 @@ if st.button("🎟 Book Ticket"):
 
     if agree:
 
-        st.balloons()
+        st.snow()
 
         st.success("Movie Ticket Booked Successfully!")
 
