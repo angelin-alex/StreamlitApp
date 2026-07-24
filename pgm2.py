@@ -39,16 +39,22 @@ if st.button("✅ Register"):
 
     st.success("Registration Completed Successfully!")
 
-    data = pd.DataFrame({
-        "Name":[name],
-        "Age":[age],
-        "Gender":[gender],
-        "Department":[department],
-        "Subjects":[", ".join(subjects)],
-        "Admission":[date]
-    })
+    st.markdown("## 📄 Registration Summary")
 
-    st.table(data)
+    st.markdown(f"""
+**👤 Student Name:** {name}
+
+**🎂 Age:** {age}
+
+**🚻 Gender:** {gender}
+
+**🏫 Department:** {department}
+
+**📚 Subjects Chosen:** {", ".join(subjects)}
+
+**📅 Admission Date:** {date}
+""")
 
     if photo is not None:
+        st.markdown("### 🖼 Profile Photo")
         st.image(photo, width=180)

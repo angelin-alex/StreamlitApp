@@ -33,20 +33,25 @@ suggestion = st.text_area("Suggestions")
 document = st.file_uploader("Upload Document")
 
 st.divider()
-
 if st.button("📩 Submit Feedback"):
 
-    st.success("Feedback Submitted!")
+    st.success("Feedback Submitted Successfully!")
 
-    st.metric("Satisfaction Score", rating)
+    st.metric("⭐ Satisfaction Rating", rating)
 
-    st.info("Thank you for your valuable feedback.")
+    st.markdown("## 📝 Feedback Summary")
 
-    st.write("Employee ID:", empid)
-    st.write("Employee Name:", name)
-    st.write("Department:", department)
-    st.write("Facilities:", facilities)
-    st.write("Suggestions:", suggestion)
+    st.markdown(f"""
+**🆔 Employee ID:** {empid}
+
+**👤 Employee Name:** {name}
+
+**🏢 Department:** {department}
+
+**🏋 Facilities Used:** {", ".join(facilities)}
+
+**💬 Suggestions:** {suggestion}
+""")
 
     if document is not None:
-        st.write("📄 Document Uploaded Successfully.")
+        st.info("📄 Supporting Document Uploaded Successfully.")

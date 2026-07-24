@@ -48,16 +48,23 @@ if st.button("🎟 Book Ticket"):
 
         st.balloons()
 
-        st.success("Booking Confirmed!")
+        st.success("Movie Ticket Booked Successfully!")
 
-        st.markdown("### 🎫 Booking Summary")
+        st.markdown("## 🎫 Booking Confirmation")
 
-        st.write("Customer:", name)
-        st.write("Movie:", movie)
-        st.write("Show:", timing)
-        st.write("Tickets:", tickets)
-        st.write("Seat:", seat)
-        st.write("Snacks:", snacks)
+        st.markdown(f"""
+            **👤 Customer Name:** {name}
+
+            **🎬 Movie:** {movie}
+
+            **🕒 Show Timing:** {timing}
+
+            **🎟 Number of Tickets:** {tickets}
+
+            **💺 Seat Type:** {seat}
+
+            **🍿 Snacks:** {", ".join(snacks)}
+        """)
 
     else:
-        st.error("Please agree to the Terms and Conditions.")
+        st.error("Please accept the Terms and Conditions.")

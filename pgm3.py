@@ -35,16 +35,23 @@ if st.button("🍽 Place Order"):
 
     if confirm:
 
-        st.success("Order Placed Successfully!")
+        st.success("Your Order has been Placed!")
 
-        st.json({
-            "Customer": name,
-            "Restaurant": restaurant,
-            "Items": food,
-            "Quantity": quantity,
-            "Instructions": instructions,
-            "Payment": payment
-        })
+        st.markdown("## 🍴 Order Summary")
+
+        st.markdown(f"""
+**👤 Customer:** {name}
+
+**🏪 Restaurant:** {restaurant}
+
+**🍕 Food Items:** {", ".join(food)}
+
+**🔢 Quantity:** {quantity}
+
+**💳 Payment Method:** {payment}
+
+**📝 Delivery Instructions:** {instructions}
+""")
 
     else:
         st.warning("Please confirm your order.")
