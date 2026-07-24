@@ -35,6 +35,8 @@ if st.button("🍽 Place Order"):
 
     if confirm:
 
+        st.snow()
+
         st.success("Your Order has been Placed!")
 
         st.markdown("## 🍴 Order Summary")
